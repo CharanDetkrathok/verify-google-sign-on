@@ -1,0 +1,24 @@
+version: '3.5'
+services:
+  google-sign-on:
+    # build: 
+    #   context: .
+    #   dockerfile: Dockerfile
+    image: charandetkrathok/google-sign-on:0.0.1
+    # container_name: google-sign-on
+    restart: always
+    # ports:
+    #   - 8885:8885
+    
+
+networks:
+  default:
+    name: backend-services
+    external: true
+
+
+# docker-compose up --build --scale google-sign-on=3
+     
+# docker run --restart=always  -d --name survey -p 8881:8881 survey-reports-api:latest
+# docker run --name survey-reports-api-redis -p 6379:6379 redis:latest redis-server --requirepass "admin-survey"
+
